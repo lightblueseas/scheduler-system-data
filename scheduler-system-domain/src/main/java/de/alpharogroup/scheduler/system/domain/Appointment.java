@@ -6,14 +6,14 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import de.alpharogroup.db.domain.BaseBusinessObject;
+import de.alpharogroup.domain.BaseDomainObject;
 import de.alpharogroup.scheduler.system.enums.Rhythm;
 
 @Getter
 @Setter
 @ToString(callSuper=true)
 @EqualsAndHashCode(callSuper=true)
-public class Appointment extends BaseBusinessObject<Integer> {
+public class Appointment extends BaseDomainObject<Integer> {
 	/** The serial Version UID */
 	private static final long serialVersionUID = 1L;
 	/** The last time from the appointment. */

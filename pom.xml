@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-persistence-parent</artifactId>
-		<version>2.2.0</version>
+		<version>2.14.0</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -42,6 +42,7 @@
 		<module>scheduler-system-entities</module>
 		<module>scheduler-system-init</module>
 		<module>scheduler-system-business</module>
+		<module>scheduler-system-domain</module>
 	</modules>
 	
 	<properties>
@@ -66,14 +67,5 @@
 		</dependencies>
 
 	</dependencyManagement>
-
-	<dependencies>
-		<!-- LOMBOK DEPENDENCIES -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-
-	</dependencies>
 	
 </project>

@@ -1,4 +1,4 @@
-package de.alpharogroup.scheduler.system.service.mapper;
+package de.alpharogroup.scheduler.system.mapper;
 
 import de.alpharogroup.db.entitymapper.AbstractEntityBOMapper;
 import de.alpharogroup.scheduler.system.domain.Appointment;
