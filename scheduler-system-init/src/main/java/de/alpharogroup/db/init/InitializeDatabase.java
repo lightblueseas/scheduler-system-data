@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import de.alpharogroup.lang.PropertiesUtils;
-import de.alpharogroup.scheduler.system.db.init.DatabaseInitialization;
-
 import org.apache.log4j.Logger;
+
+import de.alpharogroup.resourcebundle.properties.PropertiesExtensions;
+import de.alpharogroup.scheduler.system.db.init.DatabaseInitialization;
 
 
 public class InitializeDatabase {	
@@ -16,7 +16,7 @@ public class InitializeDatabase {
 			.getName());
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
-		Properties dbProperties = PropertiesUtils.loadProperties("jdbc.properties");
+		Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
 		new DatabaseInitialization(dbProperties).initializeDatabase();
 	}
 
