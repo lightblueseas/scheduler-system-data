@@ -37,7 +37,7 @@
 		<system>github</system>
 		<url>https://github.com/lightblueseas/scheduler-system-data/issues</url>
 	</issueManagement>
-	
+
 	<modules>
 		<module>scheduler-system-entities</module>
 		<module>scheduler-system-init</module>
@@ -47,12 +47,12 @@
 		<module>scheduler-system-rest-client</module>
 		<module>scheduler-system-rest-web</module>
 	</modules>
-	
+
 	<properties>
-		<!-- RESOURCEBUNDLE-CORE versions -->		
+		<!-- RESOURCEBUNDLE-CORE versions -->
 		<resourcebundle-inspector.version>2.6.0</resourcebundle-inspector.version>
-	</properties>	
-	
+	</properties>
+
 	<dependencyManagement>
 
 		<dependencies>
@@ -68,6 +68,12 @@
 				<artifactId>scheduler-system-business</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>scheduler-system-domain</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<!-- RESOURCEBUNDLE-CORE DEPENDENCIES -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
@@ -78,5 +84,5 @@
 		</dependencies>
 
 	</dependencyManagement>
-	
+
 </project>
