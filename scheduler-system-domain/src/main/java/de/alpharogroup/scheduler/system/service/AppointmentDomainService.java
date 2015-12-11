@@ -1,6 +1,8 @@
 package de.alpharogroup.scheduler.system.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import de.alpharogroup.scheduler.system.daos.AppointmentsDao;
 import de.alpharogroup.scheduler.system.domain.Appointment;
@@ -12,6 +14,8 @@ import de.alpharogroup.service.domain.AbstractDomainService;
 import lombok.Getter;
 import lombok.Setter;
 
+@Transactional
+@Service("appointmentDomainService")
 public class AppointmentDomainService
 		extends AbstractDomainService<Integer, Appointment, Appointments, AppointmentsDao, AppointmentsMapper>
 		implements AppointmentService {
@@ -29,7 +33,7 @@ public class AppointmentDomainService
 	 *            the new {@link AppointmentsDao}.
 	 */
 	@Autowired
-	public void setAppointmentsDao(AppointmentsDao appointmentsDao) {
+	public void setAppointmentsDao(final AppointmentsDao appointmentsDao) {
 		setDao(appointmentsDao);
 	}
 }
