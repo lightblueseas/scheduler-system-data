@@ -9,14 +9,31 @@ import org.apache.log4j.Logger;
 import de.alpharogroup.resourcebundle.properties.PropertiesExtensions;
 import de.alpharogroup.scheduler.system.db.init.DatabaseInitialization;
 
+/**
+ * The Class {@link InitializeDatabase} initialize the specific database.
+ */
+public class InitializeDatabase
+{
 
-public class InitializeDatabase {	
 	/** The Constant logger. */
-	protected static final Logger logger = Logger.getLogger(InitializeDatabase.class
-			.getName());
+	protected static final Logger LOG = Logger.getLogger(InitializeDatabase.class.getName());
 
-	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
-		Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
+	/**
+	 * The main method to start the initialization process from the specific database.
+	 *
+	 * @param args
+	 *            the arguments of this main method
+	 * @throws SQLException
+	 *             is thrown if a database access error occurs or this method is called on a closed
+	 *             connection
+	 * @throws ClassNotFoundException
+	 *             is thrown if the Class was not found or could not be located.
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
+	public static void main(final String[] args) throws IOException, ClassNotFoundException, SQLException
+	{
+		final Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
 		new DatabaseInitialization(dbProperties).initializeDatabase();
 	}
 
