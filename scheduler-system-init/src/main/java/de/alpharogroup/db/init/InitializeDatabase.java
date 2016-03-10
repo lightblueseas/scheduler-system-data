@@ -34,6 +34,9 @@ public class InitializeDatabase
 	public static void main(final String[] args) throws IOException, ClassNotFoundException, SQLException
 	{
 		final Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
+		if(args != null && 0< args.length ) {
+			dbProperties.setProperty(AbstractDatabaseInitialization.JDBC_CREATE_DB_PROCESS_KEY, args[0]);
+		}
 		new DatabaseInitialization(dbProperties).initializeDatabase();
 	}
 
