@@ -36,4 +36,15 @@ public class AppointmentDomainService
 	public void setAppointmentsDao(final AppointmentsDao appointmentsDao) {
 		setDao(appointmentsDao);
 	}
+	/**
+	 * Sets the specific {@link AppointmentsMapper}.
+	 *
+	 * @param mapper
+	 *            the new {@link AppointmentsMapper}.
+	 */
+	@Autowired
+	public void setAppointmentsMapper(AppointmentsMapper mapper) {
+		setMapper(mapper);
+	}
+
 }

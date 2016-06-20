@@ -2,17 +2,23 @@ package de.alpharogroup.scheduler.system.domain;
 
 import java.util.Date;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 import de.alpharogroup.domain.BaseDomainObject;
 import de.alpharogroup.scheduler.system.enums.Rhythm;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @ToString(callSuper=true)
 @EqualsAndHashCode(callSuper=true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Appointment extends BaseDomainObject<Integer> {
 	/** The serial Version UID */
 	private static final long serialVersionUID = 1L;
