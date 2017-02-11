@@ -18,7 +18,7 @@ public class SchedulerSystemRestClient extends AbstractRestClient
 	 */
 	public SchedulerSystemRestClient()
 	{
-		this(DEFAULT_BASE_URL);
+		this(DEFAULT_BASE_HTTPS_URL);
 	}
 
 	/**
