@@ -24,12 +24,31 @@
  */
 package de.alpharogroup.scheduler.system.enums;
 
+/**
+ * The enum {@link Rhythm} represents the rhythm of an appointment.
+ */
 public enum Rhythm {
-	
-	DOES_NOT_REPEAT, DAILY, WEEKLY, MONTHLY, YEARLY, CUSTOM;
-	
-	public String getValue(){
+
+	/** The does not repeat. */
+	DOES_NOT_REPEAT,
+	/** The daily. */
+	DAILY,
+	/** The weekly. */
+	WEEKLY,
+	/** The monthly. */
+	MONTHLY,
+	/** The yearly. */
+	YEARLY,
+	/** The custom. */
+	CUSTOM;
+
+	/**
+	 * Gets the value.
+	 *
+	 * @return the value
+	 */
+	public String getValue() {
 		return this.name();
 	}
-	
+
 }
