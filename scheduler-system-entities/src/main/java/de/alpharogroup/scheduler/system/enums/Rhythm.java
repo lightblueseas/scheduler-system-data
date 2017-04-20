@@ -27,7 +27,8 @@ package de.alpharogroup.scheduler.system.enums;
 /**
  * The enum {@link Rhythm} represents the rhythm of an appointment.
  */
-public enum Rhythm {
+public enum Rhythm
+{
 
 	/** The does not repeat. */
 	DOES_NOT_REPEAT,
@@ -47,7 +48,8 @@ public enum Rhythm {
 	 *
 	 * @return the value
 	 */
-	public String getValue() {
+	public String getValue()
+	{
 		return this.name();
 	}
 

@@ -35,13 +35,15 @@ import de.alpharogroup.scheduler.system.entities.Appointments;
 import de.alpharogroup.scheduler.system.service.api.AppointmentsService;
 
 @ContextConfiguration(locations = "classpath:test-applicationContext.xml")
-public class AppointmentsBusinessServiceTest extends AbstractTestNGSpringContextTests {
+public class AppointmentsBusinessServiceTest extends AbstractTestNGSpringContextTests
+{
 
 	@Autowired
 	private AppointmentsService appointmentsService;
 
-	@Test(enabled=false)
-	public void test() {
+	@Test(enabled = false)
+	public void test()
+	{
 		final List<Appointments> appointments = appointmentsService.findAll();
 		System.out.println(appointments);
 	}

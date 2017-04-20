@@ -35,13 +35,19 @@ import de.alpharogroup.scheduler.system.service.api.AppointmentsService;
 
 @Transactional
 @Service("appointmentsBusinessService")
-public class AppointmentsBusinessService extends AbstractBusinessService<Appointments, Integer, AppointmentsDao> implements AppointmentsService {
+public class AppointmentsBusinessService
+	extends
+		AbstractBusinessService<Appointments, Integer, AppointmentsDao>
+	implements
+		AppointmentsService
+{
 
 	/** The serial Version UID */
 	private static final long serialVersionUID = 1L;
 
 	@Autowired
-	public void setAppointmentsDao(AppointmentsDao appointmentsDao) {
+	public void setAppointmentsDao(AppointmentsDao appointmentsDao)
+	{
 		setDao(appointmentsDao);
 	}
 

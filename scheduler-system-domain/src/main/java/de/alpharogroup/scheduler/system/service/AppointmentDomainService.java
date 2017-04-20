@@ -41,8 +41,11 @@ import lombok.Setter;
 @Transactional
 @Service("appointmentDomainService")
 public class AppointmentDomainService
-		extends AbstractDomainService<Integer, Appointment, Appointments, AppointmentsDao, AppointmentsMapper>
-		implements AppointmentService {
+	extends
+		AbstractDomainService<Integer, Appointment, Appointments, AppointmentsDao, AppointmentsMapper>
+	implements
+		AppointmentService
+{
 
 	/** The {@link AppointmentsService}. */
 	@Autowired
@@ -57,9 +60,11 @@ public class AppointmentDomainService
 	 *            the new {@link AppointmentsDao}.
 	 */
 	@Autowired
-	public void setAppointmentsDao(final AppointmentsDao appointmentsDao) {
+	public void setAppointmentsDao(final AppointmentsDao appointmentsDao)
+	{
 		setDao(appointmentsDao);
 	}
+
 	/**
 	 * Sets the specific {@link AppointmentsMapper}.
 	 *
@@ -67,7 +72,8 @@ public class AppointmentDomainService
 	 *            the new {@link AppointmentsMapper}.
 	 */
 	@Autowired
-	public void setAppointmentsMapper(AppointmentsMapper mapper) {
+	public void setAppointmentsMapper(AppointmentsMapper mapper)
+	{
 		setMapper(mapper);
 	}
 

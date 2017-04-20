@@ -30,6 +30,6 @@ import de.alpharogroup.scheduler.system.entities.Appointments;
 /**
  * The interface {@link AppointmentsService}.
  */
-public interface AppointmentsService extends
-		BusinessService<Appointments, Integer> {
+public interface AppointmentsService extends BusinessService<Appointments, Integer>
+{
 }

@@ -48,7 +48,8 @@ public class SchedulerSystemRestClient extends AbstractRestClient
 	/**
 	 * Instantiates a new {@link SchedulerSystemRestClient} with the given base url.
 	 *
-	 * @param baseUrl the base url
+	 * @param baseUrl
+	 *            the base url
 	 */
 	public SchedulerSystemRestClient(final String baseUrl)
 	{

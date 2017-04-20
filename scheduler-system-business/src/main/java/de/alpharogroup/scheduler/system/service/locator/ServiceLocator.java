@@ -26,12 +26,13 @@ package de.alpharogroup.scheduler.system.service.locator;
 
 import de.alpharogroup.scheduler.system.service.api.AppointmentsService;
 
-public interface ServiceLocator {
+public interface ServiceLocator
+{
 
 	/**
 	 * Gets the AppointmentsService.
 	 * 
-	 * @return the AppointmentsService. 
+	 * @return the AppointmentsService.
 	 */
 	AppointmentsService getAppointmentsService();
 

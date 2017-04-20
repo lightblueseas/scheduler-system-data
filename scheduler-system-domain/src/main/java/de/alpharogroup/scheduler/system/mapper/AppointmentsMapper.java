@@ -34,6 +34,7 @@ import de.alpharogroup.scheduler.system.entities.Appointments;
  * The class {@link AppointmentsMapper}.
  */
 @Component
-public class AppointmentsMapper extends AbstractEntityDOMapper<Appointments, Appointment> {
+public class AppointmentsMapper extends AbstractEntityDOMapper<Appointments, Appointment>
+{
 
 }

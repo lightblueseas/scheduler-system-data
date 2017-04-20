@@ -30,6 +30,7 @@ import de.alpharogroup.service.domain.DomainService;
 /**
  * The interface {@link AppointmentService}.
  */
-public interface AppointmentService extends DomainService<Integer, Appointment> {
+public interface AppointmentService extends DomainService<Integer, Appointment>
+{
 
 }

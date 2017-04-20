@@ -55,11 +55,14 @@ public class InitializeDatabase
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public static void main(final String[] args) throws IOException, ClassNotFoundException, SQLException
+	public static void main(final String[] args)
+		throws IOException, ClassNotFoundException, SQLException
 	{
 		final Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
-		if(args != null && 0< args.length ) {
-			dbProperties.setProperty(AbstractDatabaseInitialization.JDBC_CREATE_DB_PROCESS_KEY, args[0]);
+		if (args != null && 0 < args.length)
+		{
+			dbProperties.setProperty(AbstractDatabaseInitialization.JDBC_CREATE_DB_PROCESS_KEY,
+				args[0]);
 		}
 		new DatabaseInitialization(dbProperties).initializeDatabase();
 	}

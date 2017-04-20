@@ -31,7 +31,8 @@ import de.alpharogroup.scheduler.system.entities.Appointments;
 
 
 @Repository("appointmentsDao")
-public class AppointmentsDao extends JpaEntityManagerDao<Appointments, Integer>{
+public class AppointmentsDao extends JpaEntityManagerDao<Appointments, Integer>
+{
 	/**
 	 * The serialVersionUID.
 	 */
