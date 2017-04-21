@@ -8,7 +8,7 @@ The project holds backend data for scheduling appointments.
 
 The source code comes under the liberal MIT License, making scheduler-system-data great for all types of applications for scheduling appointments.
 
-# Build status and latest maven version
+## Build status
 [![Build Status](https://travis-ci.org/lightblueseas/scheduler-system-data.svg?branch=master)](https://travis-ci.org/lightblueseas/scheduler-system-data)
 
 ## Maven Central
