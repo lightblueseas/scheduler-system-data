@@ -24,6 +24,8 @@
  */
 package de.alpharogroup.scheduler.system.service;
 
+import static org.testng.AssertJUnit.assertNotNull;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,18 +36,18 @@ import org.testng.annotations.Test;
 import de.alpharogroup.scheduler.system.entities.Appointments;
 import de.alpharogroup.scheduler.system.service.api.AppointmentsService;
 
-@ContextConfiguration(locations = "classpath:test-applicationContext.xml")
+@ContextConfiguration(locations = "classpath:test-h2-applicationContext.xml")
 public class AppointmentsBusinessServiceTest extends AbstractTestNGSpringContextTests
 {
 
 	@Autowired
 	private AppointmentsService appointmentsService;
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void test()
 	{
 		final List<Appointments> appointments = appointmentsService.findAll();
-		System.out.println(appointments);
+		assertNotNull(appointments);
 	}
 
 }
