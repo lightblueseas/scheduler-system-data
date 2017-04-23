@@ -1,8 +1,14 @@
-# scheduler-system-data
+# Overview
 
 Parent project that holds module projects for the persistence of scheduler data like appointments.
 
 The project holds backend data for scheduling appointments.
+
+# ERD-Diagramm
+
+The erd-diagramm for this database looks as follows: ![erd-diagramm]()
+
+This erd-diagramm was created with the awesome [SQuirreL SQL Client](http://squirrel-sql.sourceforge.net/)
 
 ## License
 
@@ -121,7 +127,10 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 			</dependency>
 			...
 		</dependencies>
-
+		 
+## Open Issues
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/scheduler-system-data.svg?style=flat)](https://github.com/astrapi69/scheduler-system-data/issues) 
+		
 ## Want to Help and improve it? ###
 
 The source code for scheduler-system-data are on GitHub. Please feel free to fork and send pull requests!
