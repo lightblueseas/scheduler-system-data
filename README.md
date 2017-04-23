@@ -6,7 +6,7 @@ The project holds backend data for scheduling appointments.
 
 # ERD-Diagramm
 
-The erd-diagramm for this database looks as follows: ![erd-diagramm]()
+The erd-diagramm for this database looks as follows: ![erd-diagramm](https://github.com/lightblueseas/scheduler-system-data/blob/develop/scheduler-system-init/src/main/resources/erd/erd-diagramm-scheduler.png)
 
 This erd-diagramm was created with the awesome [SQuirreL SQL Client](http://squirrel-sql.sourceforge.net/)
 
