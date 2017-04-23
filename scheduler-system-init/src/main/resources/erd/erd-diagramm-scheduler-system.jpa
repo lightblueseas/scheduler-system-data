@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" v="1.5.4" xs="false" id="_149294610868131" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" sm="false" abs="false" class="Appointments" visibile="true" minimized="false" rootElement="_149294610868131" id="_149294610868132">
+        <jpa:attributes>
+            <basic optional="true" attribute-type="java.util.Date" visibile="true" name="endtime" id="_149294610868534">
+                <jpa:column name="endtime" unique="false" nullable="true" insertable="true" updatable="true" table="appointments"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </basic>
+            <basic optional="true" attribute-type="java.util.Date" visibile="true" name="nexttime" id="_149294610868635">
+                <jpa:column name="nexttime" unique="false" nullable="true" insertable="true" updatable="true" table="appointments"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </basic>
+            <basic optional="true" attribute-type="java.util.Date" visibile="true" name="starttime" id="_149294610868636">
+                <jpa:column name="starttime" unique="false" nullable="true" insertable="true" updatable="true" table="appointments"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </basic>
+            <basic optional="true" attribute-type="Object" visibile="true" name="rhythm" id="_149294610868637">
+                <jpa:column name="rhythm" unique="false" nullable="true" insertable="true" updatable="true" table="appointments"/>
+                <jpa:lob/>
+            </basic>
+            <jpa:id attribute-type="Integer" visibile="true" name="id" id="_149294610868533">
+                <jpa:column name="id" unique="false" nullable="false" insertable="true" updatable="true" table="appointments"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="appointments"/>
+    </jpa:entity>
+    <jpa:diagram>
+        <plane elementRef="_149294610868131">
+            <shape elementRef="_149294610868132">
+                <Bounds x="284.0" y="146.0" width="195.0" height="146.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
