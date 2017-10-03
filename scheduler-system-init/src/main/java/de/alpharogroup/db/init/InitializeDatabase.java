@@ -30,7 +30,7 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import de.alpharogroup.resourcebundle.properties.PropertiesExtensions;
+import de.alpharogroup.resourcebundle.properties.PropertiesFileExtensions;
 import de.alpharogroup.scheduler.system.db.init.DatabaseInitialization;
 
 /**
@@ -58,7 +58,7 @@ public class InitializeDatabase
 	public static void main(final String[] args)
 		throws IOException, ClassNotFoundException, SQLException
 	{
-		final Properties dbProperties = PropertiesExtensions.loadProperties("jdbc.properties");
+		final Properties dbProperties = PropertiesFileExtensions.loadProperties("jdbc.properties");
 		if (args != null && 0 < args.length)
 		{
 			dbProperties.setProperty(AbstractDatabaseInitialization.JDBC_CREATE_DB_PROCESS_KEY,
