@@ -27,6 +27,7 @@ package de.alpharogroup.scheduler.system.factories;
 import java.util.Date;
 
 import de.alpharogroup.scheduler.system.entities.Appointments;
+import de.alpharogroup.scheduler.system.enums.Priority;
 import de.alpharogroup.scheduler.system.enums.Rhythm;
 
 public class SchedulerSystemFactory
@@ -57,12 +58,13 @@ public class SchedulerSystemFactory
 	 *            the starttime
 	 * @return AppointmentsA Appointments object
 	 */
-	public Appointments newAppointments(Date endtime, Date nexttime, Rhythm rhythm, Date starttime)
+	public Appointments newAppointments(Date endtime, Date nexttime, Rhythm rhythm, Priority priority, Date starttime)
 	{
 		Appointments appointments = new Appointments();
 		appointments.setEndtime(endtime);
 		appointments.setNexttime(nexttime);
 		appointments.setRhythm(rhythm);
+		appointments.setPriority(priority);
 		appointments.setStarttime(starttime);
 		return appointments;
 	}

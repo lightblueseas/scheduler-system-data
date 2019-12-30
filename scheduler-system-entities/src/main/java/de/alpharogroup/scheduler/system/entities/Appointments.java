@@ -36,6 +36,7 @@ import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 
 import de.alpharogroup.db.entity.BaseEntity;
+import de.alpharogroup.scheduler.system.enums.Priority;
 import de.alpharogroup.scheduler.system.enums.Rhythm;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -50,8 +51,10 @@ import lombok.Setter;
 @Entity
 @Table(name = "appointments")
 @TypeDefs({
-		@TypeDef(name = "rhythmConverter", typeClass = de.alpharogroup.db.postgres.usertype.PGEnumUserType.class, parameters = {
-				@Parameter(name = "enumClassName", value = "de.alpharogroup.scheduler.system.enums.Rhythm") }) })
+	@TypeDef(name = "rhythmConverter", typeClass = de.alpharogroup.db.postgres.usertype.PGEnumUserType.class, parameters = {
+			@Parameter(name = "enumClassName", value = "de.alpharogroup.scheduler.system.enums.Rhythm") }),
+	@TypeDef(name = "priorityConverter", typeClass = de.alpharogroup.db.postgres.usertype.PGEnumUserType.class, parameters = {
+					@Parameter(name = "enumClassName", value = "de.alpharogroup.scheduler.system.enums.Priority") })  })
 @Getter
 @Setter
 @NoArgsConstructor
@@ -59,17 +62,21 @@ public class Appointments extends BaseEntity<Integer> implements Cloneable
 {
 	/** The serial Version UID */
 	private static final long serialVersionUID = 1L;
-	/** The last time from the appointment. */
+	/** The last time from this appointment */
 	@Column(name = "endtime")
 	private Date endtime;
-	/** The next time from the apointment. */
+	/** The next time from this apointment */
 	@Column(name = "nexttime")
 	private Date nexttime;
-	/** An enum that gives us the rhythm from the appointment. */
+	/** An enum that gives us the rhythm from this appointment */
 	@Column(name = "rhythm")
 	@Type(type = "rhythmConverter")
 	private Rhythm rhythm;
-	/** The start time from the appointment. */
+	/** An enum that gives us the priority from this appointment */
+	@Column(name = "priority")
+	@Type(type = "priorityConverter")
+	private Priority priority;
+	/** The start time from this appointment */
 	@Column(name = "starttime")
 	private Date starttime;
 
